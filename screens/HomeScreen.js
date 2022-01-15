@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import Search from '../components/Search';
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import Header from '../components/Header';
+import { AdMobBanner } from 'expo-ads-admob';
 
 const HomeScreen = () => {
 
@@ -43,7 +44,11 @@ const HomeScreen = () => {
 
                 <Search updateWatchlist={updateWatchlist} getWatchlist={getWatchlist} />
             </ScrollView>
-            {/* <View style={{height: 60, backgroundColor: "#c4007a"}}><Text>Ad here</Text></View> */}
+            <AdMobBanner
+                bannerSize="fullBanner"
+                adUnitID="ca-app-pub-3940256099942544/6300978111" // Test ID, Replace with your-admob-unit-id
+                servePersonalizedAds={true}
+                 />
         </View>
     )
 }

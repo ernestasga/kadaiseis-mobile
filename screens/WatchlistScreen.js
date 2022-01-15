@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { useState, useEffect } from 'react';
 import Show from '../components/Show';
+import { AdMobBanner } from 'expo-ads-admob';
 
 const WatchlistScreen = ({ navigation }) => {
     const updateWatchlist = async (value) => {
@@ -46,6 +47,8 @@ const WatchlistScreen = ({ navigation }) => {
         navigation.addListener('focus', () => {
             fetchWatchlist()
           });
+        //loadAds()
+
     }, [navigation])
     const fetchShows = async (ids) => {
         let shows = []
@@ -71,7 +74,11 @@ const WatchlistScreen = ({ navigation }) => {
                 }
                 </View>
             </ScrollView>
-            {/* <View style={{height: 60, backgroundColor: "#c4007a"}}><Text>Ad here</Text></View> */}
+            <AdMobBanner
+                bannerSize="fullBanner"
+                adUnitID="ca-app-pub-3940256099942544/6300978111" // Test ID, Replace with your-admob-unit-id
+                servePersonalizedAds={true}
+                 />
         </View>
     )
 }
