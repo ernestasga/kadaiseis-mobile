@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "kadaiseis-mobile",
-    "slug": "kadaiseis-mobile",
+    "name": "Kadaiseis",
+    "slug": "Kadaiseis",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -28,6 +28,7 @@
         "backgroundColor": "#FFFFFF"
       },
       "package": "com.ernestasga.kadaiseis-mobile",
+      "ersionCode": 1,
       "config": {
         "googleMobileAdsAppId": "ca-app-pub-3940256099942544~3347511713"
       }
