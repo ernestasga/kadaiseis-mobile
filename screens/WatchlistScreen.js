@@ -4,7 +4,6 @@ import Header from '../components/Header';
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { useState, useEffect } from 'react';
 import Show from '../components/Show';
-import AlphabetList from "react-native-flatlist-alphabet";
 
 const WatchlistScreen = ({ navigation }) => {
     const updateWatchlist = async (value) => {
